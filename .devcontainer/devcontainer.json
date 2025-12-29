@@ -6,6 +6,6 @@
       "version": "20"
     }
   },
-  "postCreateCommand": "sh -c \"$(curl -sSfL https://release.solana.com/stable/install)\" && echo 'export PATH=\"$HOME/.local/share/solana/install/active_release/bin:$PATH\"' >> ~/.bashrc && cargo install --git https://github.com/coral-xyz/anchor avm --locked && ~/.cargo/bin/avm install latest && ~/.cargo/bin/avm use latest",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
   "remoteUser": "vscode"
 }
