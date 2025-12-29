@@ -1,0 +1,11 @@
+{
+  "name": "Solana & Anchor Development",
+  "image": "mcr.microsoft.com/devcontainers/rust:1",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "postCreateCommand": "sh -c \"$(curl -sSfL https://release.solana.com/stable/install)\" && echo 'export PATH=\"$HOME/.local/share/solana/install/active_release/bin:$PATH\"' >> ~/.bashrc && cargo install --git https://github.com/coral-xyz/anchor avm --locked && ~/.cargo/bin/avm install latest && ~/.cargo/bin/avm use latest",
+  "remoteUser": "vscode"
+}
