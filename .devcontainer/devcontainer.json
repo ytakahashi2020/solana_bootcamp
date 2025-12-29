@@ -9,7 +9,7 @@
       "version": "stable"
     }
   },
-  "postStartCommand": "bash .devcontainer/install-solana.sh",
+  "postCreateCommand": "chmod +x .devcontainer/install-solana.sh && bash .devcontainer/install-solana.sh",
   "remoteUser": "vscode",
   "customizations": {
     "vscode": {
